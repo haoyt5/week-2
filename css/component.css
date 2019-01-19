@@ -4,7 +4,7 @@
  * Vertion
  * Copyright
  * Author: Karen HaoYi Tu
- * Last Modified Date: Jan 19 2019 12:43
+ * Last Modified Date: Jan 19 2019 18:43
  *
  */
 /*-------------------------*/
@@ -461,4 +461,8 @@ a:focus {
 ---------------------------*/
 .callbutton{
 
+}
+#show-box{
+    display: none;
+    transition: all 800ms ease-in-out;
 }
