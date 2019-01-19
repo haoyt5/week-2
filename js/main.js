@@ -1,5 +1,6 @@
-// 4-1 Click to Change Text
-// https://stackoverflow.com/questions/28620819/how-to-change-button-text-on-click-using-javascript
+/* 
+Request1: Click to Change Text
+*/ 
 function changeText() {
 	var change = document.getElementById("welcome-text-change");
  	if (change.innerHTML == "Welcome Message"){
@@ -8,11 +9,10 @@ function changeText() {
 		change.innerHTML = "Welcome Message";
     }
 }
-// 4-3 Click to Show More Content Boxes
 /*
->JavaScript-Toggle Element style
- https://stackoverflow.com/questions/4528085/toggle-show-hide-div-with-button
->setTimeout : https://stackoverflow.com/questions/29755233/trouble-with-settimeout-with-addeventlistener
+Request 3 Click to Show More Content Boxes
+	JavaScript-Toggle Element style: https://stackoverflow.com/questions/4528085/toggle-show-hide-div-with-button
+	setTimeout : https://stackoverflow.com/questions/29755233/trouble-with-settimeout-with-addeventlistener
 */
 var togglebutton = document.getElementById("btn-show");
 var showcontent = document.getElementById("show-box");
@@ -20,6 +20,10 @@ var showcontent = document.getElementById("show-box");
 togglebutton.addEventListener("click", function(){
 	showcontent.style.display = (showcontent.dataset.toggled ^= 1)? "block" : "none";
 });
+
+
+
+
 
 /*
 4-3 Click to Show More Content Boxes: solution-2
