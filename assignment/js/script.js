@@ -15,6 +15,36 @@ function maxNumber(numbers) {
 console.log("1.The max number is: " + maxNumber("1 2 4 5"));
 console.log("2.The max number is: " + maxNumber("5 2 7 1 6"));
 
+/*Assignment 2: Object
+*/
+
+function calculate(args){
+	let result;
+	if(args.op === "+"){ 
+		result = args.n1 + args.n2;
+	}else if(args.op === "-"){
+		result = args.n1 - args.n2;
+	}else{
+		result = "Not supported";
+	}
+	return result;
+}
+var passObject1 = {
+	n1 : 4,
+	n2 : 5,
+	op : "+"
+};
+
+var passObject2 ={};
+passObject2['op'] = "-";
+passObject2['n1'] = 1;
+passObject2['n2'] = 2;
+
+
+console.log(calculate(passObject1));
+console.log(calculate(passObject2));
+
+
 /*Assignment 3
 Complete the function below to calculate the average price of all the products.
 */
@@ -45,3 +75,7 @@ var products = [
 	 }
 ];
 console.log("Average price of all products is: "+avg(products));// show the average price of all products
+
+
+
+

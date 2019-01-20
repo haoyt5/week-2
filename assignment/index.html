@@ -32,7 +32,31 @@ console.log(maxNumber("5 2 7 1 6"));
 		<h2>Assignment 2</h2>
 		<pre>
 			<code data-language="javascript">
+function calculate(args){
+	let result;
+	if(args.op === "+"){ 
+		result = args.n1 + args.n2;
+	}else if(args.op === "-"){
+		result = args.n1 - args.n2;
+	}else{
+		result = "Not supported";
+	}
+	return result;
+}
+var passObject1 = {
+	n1 : 4,
+	n2 : 5,
+	op : "+"
+};
 
+var passObject2 ={};
+passObject2['op'] = "-";
+passObject2['n1'] = 1;
+passObject2['n2'] = 2;
+
+
+console.log(calculate(passObject1)); 
+console.log(calculate(passObject2));
 			</code>
 		</pre>
 		<h2>Assignment 3</h2>
