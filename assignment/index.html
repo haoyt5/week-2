@@ -10,7 +10,7 @@
 <body>
 	<div class="container">
 
-		<h2>Assignment 1</h2>
+		<h2>Assignment 1: Function and Array</h2>
 		<pre>
 			<code data-language="javascript">
 function max(...theArgs) {
@@ -24,7 +24,7 @@ console.log("2.The max number is: " + max(5,2,7,1,6));
 			</code>
 		</pre>
 		
-		<h2>Assignment 2</h2>
+		<h2>Assignment 2: Object</h2>
 		<pre>
 			<code data-language="javascript">
 function calculate(args){
@@ -54,19 +54,17 @@ console.log(calculate(passObject1));
 console.log(calculate(passObject2));
 			</code>
 		</pre>
-		<h2>Assignment 3</h2>
+		<h2>Assignment 3: Function, Array, and Object</h2>
 		<pre>
 			<code data-language="javascript">
 function avg(data){
-	let sum = 0,
-		productCount = 0,
+	let acc = 0,
+		count =0,
 		i;
-	for (i=0; i < data.length; i++){
-		if (data[i].name ='Product'){
-			sum +=data[i].price;
-			++productCount;
-		}
-	}return sum / productCount;
+	for(i=0; i< data.length;i++){
+		acc +=data[i].price;
+		++ count;
+	}return acc/count
 }
 var products = [
 	{
@@ -82,7 +80,7 @@ var products = [
 		price:250
 	 }
 ];
-console.log(avg(products));
+console.log("Average price of all products is: "+ avg(products));
 			</code>
 		</pre>
 
