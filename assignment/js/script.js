@@ -71,13 +71,13 @@ console.log(calculate(passObject2));
 	Complete the function below to calculate the average price of all the products.
 */
 function avg(data){
-	let acc = 0,
+	let sum = 0,
 		count =0,
 		i;
 	for(i=0; i< data.length;i++){
-		acc +=data[i].price;
+		sum +=data[i].price;
 		++ count;
-	}return acc/count
+	}return sum/count
 }
 var products = [
 	{
