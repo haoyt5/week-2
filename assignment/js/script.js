@@ -1,6 +1,10 @@
-/*Assignment 1
+/*Assignment 1:Function and Array
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters
+https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
+https://stackoverflow.com/questions/43576241/javascript-using-reduce-to-find-min-and-max-values
+
 https://stackoverflow.com/questions/43742077/find-largest-value-in-a-string-of-numbers-without-math-max
-*/
 function maxNumber(numbers) {
   var arr = numbers.split(" ").map(Number);
   var largest = arr[0];
@@ -14,6 +18,18 @@ function maxNumber(numbers) {
 
 console.log("1.The max number is: " + maxNumber("1 2 4 5"));
 console.log("2.The max number is: " + maxNumber("5 2 7 1 6"));
+
+*/
+
+function max(...theArgs) {
+  return theArgs.reduce((acc, val) => {
+  	acc[0] = (acc[0] === undefined || val > acc[0]) ? val : acc[0]
+  	return acc;
+  },[]);
+}
+console.log("1.The max number is: " + max(1,2,4,5));
+console.log("2.The max number is: " + max(5,2,7,1,6));
+
 
 /*Assignment 2: Object
 */

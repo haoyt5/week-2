@@ -13,19 +13,14 @@
 		<h2>Assignment 1</h2>
 		<pre>
 			<code data-language="javascript">
-function maxNumber(numbers) {
-  var arr = numbers.split(" ").map(Number);
-  var largest = arr[0];
-  for (var i = 1; i < arr.length; i++) {
-    if (arr[i] > largest) {
-      largest = arr[i];
-    }
-  }
-  return largest;
+function max(...theArgs) {
+  return theArgs.reduce((acc, val) => {
+  	acc[0] = (acc[0] === undefined || val > acc[0]) ? val : acc[0]
+  	return acc;
+  },[]);
 }
-
-console.log(maxNumber("1 2 4 5"));
-console.log(maxNumber("5 2 7 1 6"));
+console.log("1.The max number is: " + max(1,2,4,5));
+console.log("2.The max number is: " + max(5,2,7,1,6));
 			</code>
 		</pre>
 		
