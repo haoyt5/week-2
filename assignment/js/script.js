@@ -14,15 +14,31 @@ function max(...theArgs) {
   	return acc;
   },[]);
 }
+
+function max2(...numbers) {
+    if (arguments.length == 0) {
+        return undefined;
+    } else {
+        var largest = arguments[0];
+    }
+    for (var i = 0; i < arguments.length; i++) {
+        if (arguments[i] > largest) {
+            largest = arguments[i];
+        }
+    }
+    return largest;
+}
+
 console.log("1.The max number is: " + max(1,2,4,5));
 console.log("2.The max number is: " + max(5,2,7,1,6));
-
+console.log("1.The max number is: " + max2(1,2,4,5));
+console.log("2.The max number is: " + max2(5,2,7,1,6));
 /*
 	https://stackoverflow.com/questions/43742077/find-largest-value-in-a-string-of-numbers-without-math-max
 	function maxNumber(numbers) {
 	  var arr = numbers.split(" ").map(Number);
 	  var largest = arr[0];
-	  for (var i = 1; i < arr.length; i++) {
+	  for (var i = 0; i < arr.length; i++) {
 	    if (arr[i] > largest) {
 	      largest = arr[i];
 	    }
@@ -70,6 +86,37 @@ console.log(calculate(passObject2));
 /*  Assignment 3
 	Complete the function below to calculate the average price of all the products.
 */
+
+
+function avg(data){
+	var sum = 0;
+	var count = data.size;
+	var	product = data.products;
+	var i;
+	for(i=0; i< product.length ; i++){
+		sum += product[i].price;
+	}return sum/count
+}
+console.log(avg({
+	size:3,
+	products:[
+	{
+		name: "Product 1",
+		price: 100
+	 },
+	 {
+	 	name: "Product 2",
+		price: 700
+	 },
+	{
+		name: "Product 3",
+		price: 250
+	 }
+]
+}));
+
+//console.log("Average price of all products is: "+ avg(products));
+/*
 function avg(data){
 	let sum = 0,
 		count =0,
@@ -79,21 +126,24 @@ function avg(data){
 		++ count;
 	}return sum/count
 }
-var products = [
+var products[
 	{
-		name:"Product 1",
-		price:100
+		name: "Product 1",
+		price: 100
 	 },
 	 {
-	 	name:"Product 2",
-		price:700
+	 	name: "Product 2",
+		price: 700
 	 },
 	{
-		name:"Product 3",
-		price:250
+		name: "Product 3",
+		price: 250
 	 }
 ];
 console.log("Average price of all products is: "+ avg(products));
+
+*/
+
 
 /*
 	function avg2(data){

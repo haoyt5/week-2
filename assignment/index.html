@@ -13,6 +13,7 @@
 		<h2>Assignment 1: Function and Array</h2>
 		<pre>
 			<code data-language="javascript">
+// 1
 function max(...theArgs) {
   return theArgs.reduce((acc, val) => {
   	acc[0] = (acc[0] === undefined || val > acc[0]) ? val : acc[0]
@@ -21,6 +22,22 @@ function max(...theArgs) {
 }
 console.log("1.The max number is: " + max(1,2,4,5));
 console.log("2.The max number is: " + max(5,2,7,1,6));
+// 2
+function max2(...numbers) {
+    if (arguments.length == 0) {
+        return undefined;
+    } else {
+        var largest = arguments[0];
+    }
+    for (var i = 0; i < arguments.length; i++) {
+        if (arguments[i] > largest) {
+            largest = arguments[i];
+        }
+    }
+    return largest;
+}
+console.log("1.The max number is: " + max2(1,2,4,5));
+console.log("2.The max number is: " + max2(5,2,7,1,6));
 			</code>
 		</pre>
 		
@@ -58,29 +75,32 @@ console.log(calculate(passObject2));
 		<pre>
 			<code data-language="javascript">
 function avg(data){
-	let sum = 0,
-		count =0,
-		i;
-	for(i=0; i< data.length;i++){
-		sum +=data[i].price;
-		++ count;
+	var sum = 0;
+	var count = data.size;
+	var	product = data.products;
+	var i;
+	for(i=0; i< product.length ; i++){
+		sum += product[i].price;
 	}return sum/count
 }
-var products = [
+console.log(avg({
+	size:3,
+	products:[
 	{
-		name:"Product 1",
-		price:100
+		name: "Product 1",
+		price: 100
 	 },
 	 {
-	 	name:"Product 2",
-		price:700
+	 	name: "Product 2",
+		price: 700
 	 },
 	{
-		name:"Product 3",
-		price:250
+		name: "Product 3",
+		price: 250
 	 }
-];
-console.log("Average price of all products is: "+ avg(products));
+]
+}));
+
 			</code>
 		</pre>
 
